@@ -6,11 +6,16 @@ import java.util.concurrent.*
 
 
 /*
- * Benchmark                           Mode  Cnt   Score   Error   Units
- * EnumListBenchmark.getKotlin        thrpt   20  42.080 ± 1.275  ops/us
- * EnumListBenchmark.getLazy          thrpt   20  44.312 ± 1.712  ops/us
- * EnumListBenchmark.iterationKotlin  thrpt   20  48.040 ± 0.383  ops/us
- * EnumListBenchmark.iterationLazy    thrpt   20  42.150 ± 2.071  ops/us
+Benchmark                             Mode  Cnt   Score   Error   Units
+EnumListBenchmark.getArray           thrpt   20  63.383 ± 0.620  ops/us
+EnumListBenchmark.getKotlin          thrpt   20  53.895 ± 0.349  ops/us
+EnumListBenchmark.getLazy            thrpt   20  58.467 ± 0.435  ops/us
+EnumListBenchmark.getVolatile        thrpt   20  57.819 ± 1.228  ops/us
+EnumListBenchmark.iterationArray     thrpt   20  86.026 ± 1.064  ops/us
+EnumListBenchmark.iterationKotlin    thrpt   20  51.655 ± 2.020  ops/us
+EnumListBenchmark.iterationLazy      thrpt   20  48.832 ± 0.547  ops/us
+EnumListBenchmark.iterationVolatile  thrpt   20  50.037 ± 1.344  ops/us
+
  */
 @Fork(2)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
